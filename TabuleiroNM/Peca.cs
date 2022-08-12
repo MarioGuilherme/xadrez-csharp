@@ -10,5 +10,9 @@
             QuantidadeMovimentos = 0;
             Tabuleiro = tabuleiro;
         }
+
+        public void IncrementarQuantidadeMovimentos() {
+            QuantidadeMovimentos++;
+        }
     }
 }
