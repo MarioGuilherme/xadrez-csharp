@@ -14,7 +14,7 @@ namespace Xadrez {
             Posicao posicao = new(0, 0);
 
             // Acima
-            posicao.DefinirValores(posicao.Linha - 1, posicao.Coluna);
+            posicao.DefinirValores(Posicao.Linha - 1, Posicao.Coluna);
             while (Tabuleiro.PosicaoValida(posicao) && PodeMover(posicao)) {
                 movimentosPossiveis[posicao.Linha, posicao.Coluna] = true;
                 if (Tabuleiro.Peca(posicao) != null && Tabuleiro.Peca(posicao).Cor != Cor)
@@ -23,7 +23,7 @@ namespace Xadrez {
             }
 
             // Abaixo
-            posicao.DefinirValores(posicao.Linha + 1, posicao.Coluna);
+            posicao.DefinirValores(Posicao.Linha + 1, Posicao.Coluna);
             while (Tabuleiro.PosicaoValida(posicao) && PodeMover(posicao)) {
                 movimentosPossiveis[posicao.Linha, posicao.Coluna] = true;
                 if (Tabuleiro.Peca(posicao) != null && Tabuleiro.Peca(posicao).Cor != Cor)
@@ -32,7 +32,7 @@ namespace Xadrez {
             }
 
             // Direita
-            posicao.DefinirValores(posicao.Linha, posicao.Coluna + 1);
+            posicao.DefinirValores(Posicao.Linha, Posicao.Coluna + 1);
             while (Tabuleiro.PosicaoValida(posicao) && PodeMover(posicao)) {
                 movimentosPossiveis[posicao.Linha, posicao.Coluna] = true;
                 if (Tabuleiro.Peca(posicao) != null && Tabuleiro.Peca(posicao).Cor != Cor)
@@ -41,7 +41,7 @@ namespace Xadrez {
             }
 
             // Esquerda
-            posicao.DefinirValores(posicao.Linha, posicao.Coluna - 1);
+            posicao.DefinirValores(Posicao.Linha, Posicao.Coluna - 1);
             while (Tabuleiro.PosicaoValida(posicao) && PodeMover(posicao)) {
                 movimentosPossiveis[posicao.Linha, posicao.Coluna] = true;
                 if (Tabuleiro.Peca(posicao) != null && Tabuleiro.Peca(posicao).Cor != Cor)
