@@ -15,6 +15,10 @@
             QuantidadeMovimentos++;
         }
 
+        public void DecrementarQuantidadeMovimentos() {
+            QuantidadeMovimentos--;
+        }
+
         public bool ExisteMovimentosPossiveis() {
             bool[,] matriz = MovimentosPossiveis();
             for (int i = 0; i < Tabuleiro.Linhas; i++)
