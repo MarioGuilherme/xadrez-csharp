@@ -7,7 +7,7 @@ namespace xadrez_console {
             try {
                 PartidaDeXadrez partida = new();
 
-                while (!partida.Terminada) {
+                while (!partida.Terminada)
                     try {
                         Console.Clear();
                         Tela.ImprimirPartida(partida);
@@ -32,7 +32,9 @@ namespace xadrez_console {
                         Console.WriteLine(e.Message);
                         Console.ReadLine();
                     }
-                }
+
+                Console.Clear();
+                Tela.ImprimirPartida(partida);
             } catch (TabuleiroException e) {
                 Console.WriteLine(e.Message);
             }
