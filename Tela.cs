@@ -75,7 +75,7 @@ namespace xadrez_console {
             string s = Console.ReadLine();
             char coluna = s[0];
             int linha = int.Parse(s[1].ToString());
-            return new PosicaoXadrez(coluna, linha);
+            return new(coluna, linha);
         }
 
         public static void ImprimirPeca(Peca peca) {
